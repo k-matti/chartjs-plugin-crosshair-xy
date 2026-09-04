@@ -1,0 +1,64 @@
+{
+  "name": "chartjs-plugin-crosshair-xy",
+  "version": "0.1.0",
+  "description": "Tiny Chart.js v4 plugin drawing vertical and horizontal crosshair lines through the hovered point.",
+  "keywords": [
+    "chart.js",
+    "chartjs",
+    "chartjs-plugin",
+    "crosshair",
+    "cursor",
+    "hover",
+    "tooltip"
+  ],
+  "license": "MIT",
+  "author": "k-matti",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k-matti/chartjs-plugin-crosshair-xy.git"
+  },
+  "bugs": "https://github.com/k-matti/chartjs-plugin-crosshair-xy/issues",
+  "homepage": "https://github.com/k-matti/chartjs-plugin-crosshair-xy#readme",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run build && node --test test/*.test.js",
+    "prepublishOnly": "npm run typecheck && npm test"
+  },
+  "peerDependencies": {
+    "chart.js": "^4.0.0"
+  },
+  "devDependencies": {
+    "chart.js": "^4.5.1",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}
