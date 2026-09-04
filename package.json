@@ -1,6 +1,6 @@
 {
   "name": "chartjs-plugin-crosshair-xy",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Tiny Chart.js v4 plugin drawing vertical and horizontal crosshair lines through the hovered point.",
   "keywords": [
     "chart.js",
